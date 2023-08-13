@@ -83,6 +83,8 @@ const ProjectForm = ({ type, session, project }: Props) => {
           type === "create" ? "create" : "edit"
         } a project. Try again!`
       );
+      console.error(error);
+      
     } finally {
       setSubmitting(false);
     }
