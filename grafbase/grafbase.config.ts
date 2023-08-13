@@ -19,8 +19,9 @@ const Project = g.model('Project', {
   description: g.string(), 
   image: g.url(),
   liveSiteUrl: g.url(), 
-  githubUrl: g.url(), 
-  category: g.string().search(),
+  githubUrl: g.url(),
+  // @ts-ignore
+  category: g.string().search().optional(),
   createdBy: g.relation(() => User),
 }).auth((rules) => {
   rules.public().read()
