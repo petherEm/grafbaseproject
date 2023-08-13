@@ -48,6 +48,7 @@ export const fetchAllProjects = (category?: string | null, endcursor?: string | 
 };
 
 export const createNewProject = async (form: ProjectForm, creatorId: string, token: string) => {
+  client.setHeader("Authorization", `Bearer ${token}`);
   const imageUrl = await uploadImage(form.image);
 
   if (imageUrl.url) {
