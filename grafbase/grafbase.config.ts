@@ -21,7 +21,7 @@ const Project = g.model('Project', {
   liveSiteUrl: g.url(), 
   githubUrl: g.url(),
   // @ts-ignore
-  category: g.string().search().optional(),
+  category: g.string().search(),
   createdBy: g.relation(() => User),
 }).auth((rules) => {
   rules.public().read()
