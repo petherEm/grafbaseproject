@@ -100,7 +100,7 @@ export const createNewProject = async (
   }
 };
 
-export const fetchAllProjects = async (
+export const fetchAllProjects = (
   category?: string,
   endcursor?: string
 ) => {
