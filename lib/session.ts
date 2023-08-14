@@ -36,7 +36,7 @@ export const authOptions: NextAuthOptions = {
   },
   theme: {
     colorScheme: "light",
-    logo: "/logo.svg",
+    logo: "/developedian_logo.svg",
   },
   callbacks: {
     async session({ session }) {
